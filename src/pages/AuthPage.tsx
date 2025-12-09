@@ -80,67 +80,68 @@ const AuthPage: React.FC<AuthPageProps> = ({ onAuthenticated, onBackToWelcome })
               <CardTitle className="text-3xl font-bold text-white">
                 Access Required
               </CardTitle>
-              Enter your password to access the Elite Motors and Detailing
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Input
-                  type="password"
-                  placeholder="Enter access password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-orange-400 h-12 text-lg"
-                  required
-                />
-              </div>
-              {error && (
-                <div className="p-3 bg-red-500/20 border border-red-500/30 rounded-lg">
-                  <p className="text-red-200 text-sm text-center">{error}</p>
+              <CardDescription className="text-blue-100">
+                Enter your password to access the Elite Motors and Detailing
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <Input
+                    type="password"
+                    placeholder="Enter access password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-orange-400 h-12 text-lg"
+                    required
+                  />
                 </div>
-              )}
-              <Button
-                type="submit"
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white h-12 text-lg font-semibold"
-                disabled={isLoading}
-              >
-                {isLoading ? (
-                  <div className="flex items-center">
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Authenticating...
+                {error && (
+                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded-lg">
+                    <p className="text-red-200 text-sm text-center">{error}</p>
                   </div>
-                ) : (
-                  'Access Dashboard'
                 )}
-              </Button>
-            </form>
+                <Button
+                  type="submit"
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white h-12 text-lg font-semibold"
+                  disabled={isLoading}
+                >
+                  {isLoading ? (
+                    <div className="flex items-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Authenticating...
+                    </div>
+                  ) : (
+                    'Access Dashboard'
+                  )}
+                </Button>
+              </form>
 
-            <div className="mt-6 pt-6 border-t border-white/20">
-              <div className="text-center text-sm text-blue-100 space-y-2">
-                <p className="flex items-center justify-center">
-                  <Wrench className="h-4 w-4 mr-2 text-orange-400" />
-                  Secure Access Portal
-                </p>
-                <p className="text-xs text-gray-300">
-                  This system is protected for authorized personnel only
-                </p>
+              <div className="mt-6 pt-6 border-t border-white/20">
+                <div className="text-center text-sm text-blue-100 space-y-2">
+                  <p className="flex items-center justify-center">
+                    <Wrench className="h-4 w-4 mr-2 text-orange-400" />
+                    Secure Access Portal
+                  </p>
+                  <p className="text-xs text-gray-300">
+                    This system is protected for authorized personnel only
+                  </p>
+                </div>
               </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
 
-        {/* Additional Info */}
-        <div className="mt-6 text-center">
-          <div className="bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-            <h3 className="text-white font-semibold mb-2">Elite Motors and Detailing</h3>
-            <p className="text-gray-300 text-sm">
-              Complete automotive service and inventory management platform
-            </p>
+          {/* Additional Info */}
+          <div className="mt-6 text-center">
+            <div className="bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
+              <h3 className="text-white font-semibold mb-2">Elite Motors and Detailing</h3>
+              <p className="text-gray-300 text-sm">
+                Complete automotive service and inventory management platform
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div >
   );
 };

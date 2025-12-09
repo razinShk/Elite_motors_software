@@ -20,17 +20,17 @@ const WelcomePage: React.FC<WelcomePageProps> = ({ onEnterGarage }) => {
       >
         <source src="/BMW M3 Competition - 4K Cinematic Short Video.mp4" type="video/mp4" />
         {/* Fallback background image if video fails to load */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80')`
           }}
         />
       </video>
-      
+
       {/* Video overlay for better text readability */}
       <div className="absolute inset-0 bg-black/50" />
-      
+
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header */}
@@ -41,7 +41,7 @@ const WelcomePage: React.FC<WelcomePageProps> = ({ onEnterGarage }) => {
             </div>
             <div>
               <h1 className="text-2xl md:text-3xl font-bold text-white">Elite Motor and Detailing</h1>
-              <p className="text-orange-200 text-sm">Engine • Suspension • Scanning • AC Works</p>
+              <p className="text-orange-200 text-sm">Detailing • Selling • Modifying</p>
             </div>
           </div>
         </header>
@@ -57,20 +57,19 @@ const WelcomePage: React.FC<WelcomePageProps> = ({ onEnterGarage }) => {
                   <span className="text-orange-400 block">Complete Care</span>
                 </h2>
                 <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                  Expert automotive services specializing in Engine, Suspension, Scanning & AC Works. 
-                  We repair all types of cars with professional expertise.
+                  Detailing and selling and modification.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Button 
+                  <Button
                     onClick={onEnterGarage}
                     size="lg"
                     className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
                   >
                     Enter Garage
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     size="lg"
                     className="border-white text-black bg-white hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
                   >
@@ -138,7 +137,7 @@ const WelcomePage: React.FC<WelcomePageProps> = ({ onEnterGarage }) => {
                 <div className="text-2xl font-bold text-white">500+</div>
                 <div className="text-sm text-gray-300">Happy Customers</div>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4">
                 <div className="flex items-center justify-center mb-2">
                   <Wrench className="h-6 w-6 text-orange-400" />
@@ -146,7 +145,7 @@ const WelcomePage: React.FC<WelcomePageProps> = ({ onEnterGarage }) => {
                 <div className="text-2xl font-bold text-white">1000+</div>
                 <div className="text-sm text-gray-300">Services Done</div>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4">
                 <div className="flex items-center justify-center mb-2">
                   <Star className="h-6 w-6 text-orange-400" />
@@ -154,7 +153,7 @@ const WelcomePage: React.FC<WelcomePageProps> = ({ onEnterGarage }) => {
                 <div className="text-2xl font-bold text-white">4.9★</div>
                 <div className="text-sm text-gray-300">Average Rating</div>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4">
                 <div className="flex items-center justify-center mb-2">
                   <Zap className="h-6 w-6 text-orange-400" />
